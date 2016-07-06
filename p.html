@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <style>
+            #container {
+                position: relative;
+                width: 853px;
+                height: 480px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            * {
+                cursor: pointer;
+            }
+
+            #canvas, #gui {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            #gui {
+                background-color: rgba(0, 0, 0, 0.3);
+                transition: background-color 0.5s;
+                width: 853px;
+                height: 480px;
+            }
+
+            #menu {
+                margin: 15% auto 0 auto;
+                width: 60%;
+            }
+
+            #menu-open-button, #back-to-game-button, #about, #between-level {
+                display: none;
+            }
+
+            .noSelect {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            .btn {
+                transition: color 0.5s;
+            }
+
+            #main-buttons > .btn {
+                font-size: 2em;
+                text-align: center;
+                margin-bottom: 1em;
+            }
+
+            .btn:hover {
+                color: lightblue;
+            }
+
+            .txt-color {
+                color: white;
+                text-shadow: 1px 1px 1px black;
+            }
+
+            #menu-open-button, #back-to-game-button, #back-from-about-button, #next-level-button {
+                position: absolute;
+                padding: 10px;
+            }
+
+            #menu-open-button, #back-to-game-button, #back-from-about-button {
+                top: 0;
+                left: 0;
+            }
+
+            #about-message {
+                font-size: 1.2em;
+                line-height: 1.5em;
+            }
+
+
+        </style>
+        <link rel="stylesheet" href="libs/font-awesome-4.5.0/css/font-awesome.min.css"/>
+    </head>
+    <body>
+        <div id="container">
+            <canvas id="canvas" width="853" height="480"></canvas>
+            <div id="gui">
+                <div id="menu-open-button" class="txt-color btn noSelect">
+                    <i class="fa fa-bars fa-3x"></i>
+                </div>
+                <div id="menu">
+                    <div id="main">
+                        <div id="back-to-game-button" class="txt-color btn noSelect">
+                            <i class="fa fa-times fa-3x"></i>
+                        </div>
+                        <div id="main-buttons">
+                            <div id="load-button" class="btn txt-color noSelect">load model</div>
+                            <div id="about-button" class="btn txt-color noSelect">about</div>
+                        </div>
+                    </div>
+                    <div id="about">
+                        <div id="back-from-about-button" class="txt-color btn noSelect">
+                            <i class="fa fa-arrow-left fa-3x"></i>
+                        </div>
+                        <div id="about-message" class="txt-color noSelect">
+                            Nowadays browsers are capable of displaying complex 3D objects. When a web designer finish making the model, they often want to
+                            see how it looks like in a real browser. This tiny application allows you to upload a .obj file produced by your favourite modeling
+                            tools, and it will try to render the objects.
+
+                            This application uses a library called glMatrix for fast matrix calculations.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="file" id="input" style="display:none"/>
+        </div>
+        <div id="Stats-output"></div>
+
+        <script type="text/javascript" src="libs/jquery.js"></script>
+        <script type="text/javascript" src="libs/stats.js"></script>
+        <script type="text/javascript" src="libs/gl-matrix.js"></script>
+        <script type="text/javascript" src="libs/webgl-debug.js"></script>
+        <script type="text/javascript" src="time.js"></script>
+        <script type="text/javascript" src="obj.js"></script>
+        <script type="text/javascript" src="level.js"></script>
+        <script type="text/javascript" src="menu.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
