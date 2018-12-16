@@ -1,0 +1,95 @@
+body {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+#container {
+    position: relative;
+    width: 853px;
+    height: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {
+    cursor: pointer;
+}
+
+#canvas, #gui {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#gui {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s;
+    width: 853px;
+    height: 480px;
+}
+
+#menu {
+    margin: 15% auto 0 auto;
+    width: 60%;
+}
+
+#menu-open-button, #back-to-game-button, #about, #between-level {
+    display: none;
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn {
+    transition: color 0.5s;
+}
+
+#main-buttons > .btn {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.btn:hover {
+    color: lightblue;
+}
+
+.txt-color {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+#menu-open-button, #back-to-game-button, #back-from-about-button, #next-level-button {
+    position: absolute;
+    padding: 10px;
+}
+
+#menu-open-button, #back-to-game-button, #back-from-about-button {
+    top: 0;
+    left: 0;
+}
+
+#about-message {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+.demo-text {
+    width: 800px;
+    margin: 10px auto;
+}
+
+.demo-input {
+    width: 800px;
+    margin: 10px auto;
+    background: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}

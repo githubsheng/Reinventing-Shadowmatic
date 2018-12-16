@@ -3,87 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title></title>
-        <style>
-            #container {
-                position: relative;
-                width: 853px;
-                height: 480px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            * {
-                cursor: pointer;
-            }
-
-            #canvas, #gui {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-
-            #gui {
-                background-color: rgba(0, 0, 0, 0.3);
-                transition: background-color 0.5s;
-                width: 853px;
-                height: 480px;
-            }
-
-            #menu {
-                margin: 15% auto 0 auto;
-                width: 60%;
-            }
-
-            #menu-open-button, #back-to-game-button, #about, #between-level {
-                display: none;
-            }
-
-            .noSelect {
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-
-            .btn {
-                transition: color 0.5s;
-            }
-
-            #main-buttons > .btn {
-                font-size: 2em;
-                text-align: center;
-                margin-bottom: 1em;
-            }
-
-            .btn:hover {
-                color: lightblue;
-            }
-
-            .txt-color {
-                color: white;
-                text-shadow: 1px 1px 1px black;
-            }
-
-            #menu-open-button, #back-to-game-button, #back-from-about-button, #next-level-button {
-                position: absolute;
-                padding: 10px;
-            }
-
-            #menu-open-button, #back-to-game-button, #back-from-about-button {
-                top: 0;
-                left: 0;
-            }
-
-            #about-message {
-                font-size: 1.2em;
-                line-height: 1.5em;
-            }
-
-
-        </style>
         <link rel="stylesheet" href="libs/font-awesome-4.5.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="css/demo.css"/>
     </head>
     <body>
         <div id="container">
@@ -98,6 +19,7 @@
                             <i class="fa fa-times fa-3x"></i>
                         </div>
                         <div id="main-buttons">
+                            <div id="quick-demo" class="btn txt-color noSelect">quick demo</div>
                             <div id="load-button" class="btn txt-color noSelect">load model</div>
                             <div id="about-button" class="btn txt-color noSelect">about</div>
                         </div>
@@ -118,16 +40,17 @@
             </div>
             <input type="file" id="input" style="display:none"/>
         </div>
+        <div class="demo-text">
+            - Drag and rotate the node on the right. Light and shadows calculated real time. <br/>
+            - You can upload any .obj files and this library will render it. <br/>
+            - This library uses <a href="http://glmatrix.net/">glMatrix</a> for fast matrix calculation
+        </div>
         <div id="Stats-output"></div>
 
         <script type="text/javascript" src="libs/jquery.js"></script>
         <script type="text/javascript" src="libs/stats.js"></script>
         <script type="text/javascript" src="libs/gl-matrix.js"></script>
         <script type="text/javascript" src="libs/webgl-debug.js"></script>
-        <script type="text/javascript" src="time.js"></script>
-        <script type="text/javascript" src="obj.js"></script>
-        <script type="text/javascript" src="level.js"></script>
-        <script type="text/javascript" src="menu.js"></script>
-        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="dist/bundle.js"></script>
     </body>
 </html>

@@ -1,12 +1,14 @@
-// OBJDoc object
-// Constructor
-// it assumes that the vertices using 3DS Max default coordinate system. When exporting to obj file, "flipYZ axis" option is not
-// selected.
-var OBJDoc = function() {
+/**
+ * Constructor
+ * it assumes that the vertices using 3DS Max default coordinate system. When exporting to obj file, "flipYZ axis" option is not
+ * selected.
+ * @constructor
+ */
+export function OBJDoc() {
     this.objects = new Array(0);   // Initialize the property for Object
     this.vertices = new Array(0);  // Initialize the property for Vertex
     this.normals = new Array(0);   // Initialize the property for Normal
-};
+}
 
 // Parsing the OBJ file
 OBJDoc.prototype.parse = function(fileString, scale) {
@@ -270,7 +272,7 @@ function getWordLength(str, start) {
     var n = 0;
     for (var i = start, len = str.length; i < len; i++) {
         var c = str.charAt(i);
-        if (c == '\t' || c == ' ' || c == '(' || c == ')' || c == '"')
+        if (c === '\t' || c === ' ' || c === '(' || c === ')' || c === '"')
             break;
     }
     return i - start;

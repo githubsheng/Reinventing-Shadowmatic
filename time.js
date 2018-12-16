@@ -1,8 +1,4 @@
-/**
- * Created by wangsheng on 23/12/15.
- */
-
-function ElapsedTime(){
+export function ElapsedTime(){
     this.startTime = +new Date();
 }
 
@@ -10,7 +6,7 @@ ElapsedTime.prototype.getElapsedTime = function(){
     return +new Date() - this.startTime;
 };
 
-function Transition(duration, startX, startY, contr1X, contr1Y, contr2X, contr2Y, endX, endY){
+export function Transition(duration, startX, startY, contr1X, contr1Y, contr2X, contr2Y, endX, endY){
     this.duration = duration;
     this.startX = startX;
     this.startY = startY;
