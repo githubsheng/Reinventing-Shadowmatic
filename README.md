@@ -12,6 +12,8 @@ A live demo can be found here: https://githubsheng.github.io/WSModelViewer/p.htm
 
 Here is a static snapshot of how it looks like. The scene was inspired by a game called `shadowmatic`.
 
+![snapshot](https://raw.githubusercontent.com/githubsheng/githubsheng.github.io/master/WSModelViewer/image/demo.png)
+
 # To further develop this library
 
 You need to install `webpack` to deal with the import / export in the code.
