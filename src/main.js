@@ -888,10 +888,10 @@ function init(){
     gl.clearColor(1.0, 1.0, 1.0, 1.0);
 
     //do remember to update the count in `startDrawingIfPrepared` if the following lines are modified.
-    loadShadersAndCreateProgram("shaders/mysObjVertex.glsl", "shaders/mysObjFrag.glsl", createNormalProgram, startDrawingIfPrepared);
-    loadShadersAndCreateProgram("shaders/shadowVertex.glsl", "shaders/shadowFrag.glsl", createShadowProgram, startDrawingIfPrepared);
-    loadShadersAndCreateProgram("shaders/wallVertex.glsl", "shaders/wallFrag.glsl", createWallProgram, startDrawingIfPrepared);
-    loadShadersAndCreateProgram("shaders/bgVertex.glsl", "shaders/bgFrag.glsl", createBackgroundProgram, startDrawingIfPrepared);
+    loadShadersAndCreateProgram("src/shaders/mysObjVertex.glsl", "src/shaders/mysObjFrag.glsl", createNormalProgram, startDrawingIfPrepared);
+    loadShadersAndCreateProgram("src/shaders/shadowVertex.glsl", "src/shaders/shadowFrag.glsl", createShadowProgram, startDrawingIfPrepared);
+    loadShadersAndCreateProgram("src/shaders/wallVertex.glsl", "src/shaders/wallFrag.glsl", createWallProgram, startDrawingIfPrepared);
+    loadShadersAndCreateProgram("src/shaders/bgVertex.glsl", "src/shaders/bgFrag.glsl", createBackgroundProgram, startDrawingIfPrepared);
     // loadShadersAndCreateProgram("shaders/lineVertex.glsl", "shaders/lineFrag.glsl", createLineProgram, startDrawingIfPrepared);
     loadBackgroundImage(startDrawingIfPrepared);
     loadSceneModelData(startDrawingIfPrepared);

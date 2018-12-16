@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './menu.js',
+    entry: './src/menu.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
